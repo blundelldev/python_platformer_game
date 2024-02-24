@@ -1,4 +1,6 @@
 import pygame
+import sys
+from tkinter import messagebox
 
 class env():
     def __init__(self, level):
@@ -7,14 +9,20 @@ class env():
         , [400, 400, 100, 300], [600, 400, 200, 100], [900, 300, 100, 100]]
         , "3" : [[0, 700, 1000, 100], [400, 400, 100, 300], [600, 400, 200, 100], [900, 300, 100, 100], [600, 200, 200, 100]]
         , "1" : [[0, 700, 1000, 100]]
+        , "4" : [[0, 700, 200, 50], [300, 600, 200, 50], [550, 150, 50, 400]]
         }
         self.goal_img = pygame.image.load('assets/endflag.png')
         self.floor_img = pygame.image.load('assets/floors.png')
         self.goal = pygame.transform.scale(self.goal_img, (50, 50))
         self.goals = {"2" : [900, 250]
                       ,"3" : [700, 150]
-                      ,"1" : [900, 650]}
+                      ,"1" : [900, 650]
+                      , "4" : [900, 650]}
         self.level = level
+        if self.placements.get(str(self.level)) == None:
+            pygame.quit()
+            messagebox.showinfo(message="You have reached the end of the game; Thank you for playing!")
+            sys.exit()
 
 
     def draw(self, window=pygame.display):
