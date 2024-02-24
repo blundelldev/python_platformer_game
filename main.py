@@ -20,6 +20,8 @@ class main():
         self.plr_hb = self.plr.get_rect()
         self.jumpmovs = 0
         self.level = 1
+        pygame.display.set_icon(plr_img)
+        pygame.display.set_caption('Platformer')
 
     def run(self):
 
