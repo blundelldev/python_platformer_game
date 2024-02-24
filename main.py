@@ -84,7 +84,6 @@ class main():
             if env(self.level).finishlevel(self.plr_poz[0] + 25, self.plr_poz[1] + 25):
                 self.plr_poz = [50, 50]
                 self.level = self.level + 1
-                print("level finished")
 
             pygame.display.update()
 game = main()

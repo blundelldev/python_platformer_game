@@ -36,7 +36,6 @@ class env():
         window.blit(self.goal, self.goals.get(str(self.level)))
     
     def envcollide(self, plrx, plrbasey):
-        print(self.level)
         levellod = self.placements.get(str(self.level))
         for box in range(0, len(levellod)):
             rect = pygame.Rect(levellod[box])
@@ -50,7 +49,6 @@ class env():
         self.goal_rect.y = self.goals.get(str(self.level))[1]
         if self.goal_rect.collidepoint(plrx, plry):
             self.level =+ 1
-            print(self.level)
             return True
 
         return False
