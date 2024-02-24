@@ -85,7 +85,7 @@ class main():
                     self.jump = False
                     self.plr_poz[1] = math.trunc(self.plr_poz[1] / 5) * 5
 
-            if env(self.level).finishlevel(self.plr_poz[0] + 25, self.plr_poz[1] + 25):
+            if env(self.level).finishlevel(self.plr_poz[0], self.plr_poz[1] + 25) or env(self.level).finishlevel(self.plr_poz[0] + 50, self.plr_poz[1] + 25):
                 self.plr_poz = [50, 50]
                 self.level = self.level + 1
 
