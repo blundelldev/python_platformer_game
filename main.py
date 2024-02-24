@@ -59,7 +59,7 @@ class main():
                     if event.key == pygame.K_UP or event.key == pygame.K_w or event.key == pygame.K_SPACE:
                         self.inputs[2] = False
 
-            if not env(self.level).envcollide(self.plr_poz[0] + (self.plr.get_width()), self.plr_poz[1] + self.plr.get_height()) and not env(self.level).envcollide(self.plr_poz[0], self.plr_poz[1] + self.plr.get_height()):
+            if not env(self.level).envcollide(self.plr_poz[0] - 5, self.plr_poz[1] + self.plr.get_height()) and not env(self.level).envcollide(self.plr_poz[0] + 50, self.plr_poz[1] + self.plr.get_height()):
                 if not self.jump:
                     self.plr_poz[1] += 5
                     self.fallcount += 1
@@ -76,6 +76,8 @@ class main():
                 
                 if not env(self.level).envcollide(self.plr_poz[0] + 25, self.plr_poz[1]):
                     self.plr_poz[1] -=  int(self.jumppw / 5)
+
+                
                 self.jumppw -= int(self.jumppw / 5)
                 self.jumpmovs += 1
                 
