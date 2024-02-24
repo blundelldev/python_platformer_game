@@ -1,12 +1,11 @@
 # Python Platformer
 
 ### Controls
-
-
-| Left      | Left Button / A               |
-| ----------- | ------------------------------- |
-| **Right** | **Right Button / D**          |
-| **Jump**  | **Up Button / W / Space Key** |
+| Movement  |Key Bind                       |
+|:---------:|:-----------------------------:|
+|   Left    |       Left Button / A         |
+|   Right   |      Right Button / D         |
+|   Jump    |  Up Button / W / Space Key    |
 
 ### How To Play
 
