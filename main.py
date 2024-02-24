@@ -12,6 +12,7 @@ class main():
         self.jump = False
         self.fallcount = 0
         self.jumppw = 0
+        pygame.joystick.init()
         plr_img = pygame.image.load(player_img)
         wtrmark_img = pygame.image.load('assets/wtrmark.png')
         self.plr_poz = [100, 200]
@@ -96,7 +97,7 @@ print('hope you enjoy the game')
 if plr_image == "1":
     plr_image = 'assets/player.png'
 elif plr_image == "2":
-    plr_image = 'assets/player2.png'
+    plr_image = 'assets/toonsquare.png'
 else:
     print('you seem to have entered an invalid name, you may have also entered a different directory')
 game = main(plr_image)
