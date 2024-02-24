@@ -5,14 +5,14 @@ from bloks.environment import env
 pygame.init()
 
 class main():
-    def __init__(self):
+    def __init__(self, player_img):
         self.inputs = [False, False, False]
         self.window = pygame.display.set_mode((1000, 800))
         self.clock = pygame.time.Clock()
         self.jump = False
         self.fallcount = 0
         self.jumppw = 0
-        plr_img = pygame.image.load('assets/player.png')
+        plr_img = pygame.image.load(player_img)
         wtrmark_img = pygame.image.load('assets/wtrmark.png')
         self.plr_poz = [100, 200]
         self.plr = pygame.transform.scale(plr_img, (50, 50))
@@ -90,5 +90,14 @@ class main():
                 self.level = self.level + 1
 
             pygame.display.update()
-game = main()
+
+plr_image = input("choose a enter the number from this key to choose character skin:\n 1 = crazy triangle\n 2 = toon cube\n --")
+print('hope you enjoy the game')
+if plr_image == "1":
+    plr_image = 'assets/player.png'
+elif plr_image == "2":
+    plr_image = 'assets/player2.png'
+else:
+    print('you seem to have entered an invalid name, you may have also entered a different directory')
+game = main(plr_image)
 game.run()
